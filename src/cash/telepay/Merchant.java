@@ -1,16 +1,17 @@
-
 package cash.telepay;
 
 /**
- *
+ * Merchant
  * @author jrgf
  */
 public class Merchant {
-    
-    private String secretKey;
+
+    private final String secretKey;
+
     public Merchant(String secretKey){
         this.secretKey=secretKey;
     }
+    
     public String getSecretKey() {
         return secretKey;
     }
