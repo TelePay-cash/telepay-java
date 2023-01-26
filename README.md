@@ -1,8 +1,10 @@
-# telepay-java
 # JAVA SDK for the TelePay API
 
+![TelePay Python](https://github.com/TelePay-cash/telepay-java/blob/main/docs/cover.png?raw=true)
 
-TelePay client library for the JAVA language, so you can easely process cryptocurrency payments using the REST API.
+Official TelePay client library for the Python language, so you can easily process cryptocurrency payments using the REST API.
+
+TelePay client library for the JAVA language, so you can easily process cryptocurrency payments using the REST API.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Last commit](https://img.shields.io/github/last-commit/telepay-cash/telepay-java.svg?style=flat-square)](https://github.com/telepay-cash/telepay-java/commits)
@@ -29,7 +31,7 @@ The SDK has 2 dependencies of the libraries:
 **Configure the TelePay client using the secret of your merchant**
 ```java
 Merchant merchant = new Merchant(YOUR_SECRET_KEY);
-TelepayClient client = new TeleplayClient(merchant);
+TelepayClient client = new TelepayClient(merchant);
 ```
 **Get your current merchant** [Read docs](https://telepay.readme.io/reference/getme)
 ```java
@@ -83,7 +85,7 @@ Get the balance of an specific asset of the merchant [Read docs](https://telepay
 String asset = "TON";
 String blockchain = "TON";
 String network = "mainnet";
-JSONObject balance = client.getBalance(asset,blockchain,network);
+JSONObject balance = client.getBalance(asset, blockchain, network);
 System.out.println(balance);
 ```
 **Create Invoice**
@@ -93,7 +95,7 @@ String asset = "TON";
 String blockchain = "TON";
 String network = "mainnet";
 double amount = 10;
-JSONObject invoice = client.createInvoice(asset,blockchain,network,amount);
+JSONObject invoice = client.createInvoice(asset, blockchain, network, amount);
 System.out.println(invoice);
 ```
 **Delete Invoice**
@@ -111,17 +113,16 @@ JSONObject cancel = client.cancelInvoice(invoiceNumber);
 System.out.println(delete);
 ```
 **Transfer**
-Transfer funds between wallets[Read docs](https://telepay.readme.io/reference/transfer)
+Transfer funds between wallets [Read docs](https://telepay.readme.io/reference/transfer)
 ```java
 String asset = "TON";
 String blockchain = "TON";
 String network = "mainnet";
 double amount = 10;
 String username = "jrgf"
-JSONObject transfer = client.transfer(asset,blockchain,network,amount,transfer);
+JSONObject transfer = client.transfer(asset, blockchain, network, amount, transfer);
 System.out.println(transfer);
 ```
-
 
 ## Contributors ✨
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
