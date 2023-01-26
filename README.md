@@ -16,7 +16,7 @@ Official TelePay client library for the Python language, so you can easily proce
 
 ## Installation
 
-Comming soon(Installation with Maven or Graddle):
+Coming soon (Installation with Maven or Graddle):
 For now copy the .jar file and import it to your project
 
 ## Dependencies
@@ -24,37 +24,40 @@ The SDK has 2 dependencies of the libraries:
 - java.net.http
 - org.json
 
-
 ## Using the library
+
 **Configure the TelePay client using the secret of your merchant**
 ```java
 Merchant merchant = new Merchant(YOUR_SECRET_KEY);
 TelepayClient client = new TelepayClient(merchant);
 ```
+
 **Get your current merchant** [Read docs](https://telepay.readme.io/reference/getme)
 ```java
 JSONObject me = client.getMe();
 System.out.println(me);
 ```
+
 **Get your balance** [Read docs](https://telepay.readme.io/reference/getbalance)
 ```java
 JSONObject balance = client.getBalance();
 System.out.println(balance);
 ```
-**Get the assets**
 
+**Get the assets**
 Get assets supported by TelePay. [Read docs](https://telepay.readme.io/reference/getassets)
 ```java
 JSONObject assets = client.getAssets();
 System.out.println(assets);
 ```
-**Get invoices**
 
+**Get invoices**
 Get the merchant's invoices. [Read docs](https://telepay.readme.io/reference/getinvoices)
 ```java
 JSONObject invoices = client.getInvoices();
 System.out.println(invoices);
 ```
+
 **Get invoice**
 You can also get a single invoice in particular by invoice number [Read docs](https://telepay.readme.io/reference/getWebhooks)
 ```java
@@ -62,8 +65,8 @@ String invoiceNumber = "75";
 JSONObject invoice = client.getInvoice();
 System.out.println(invoice);
 ```
-**Get webhooks**
 
+**Get webhooks**
 Get the merchant's webhooks. [Read docs](https://telepay.readme.io/reference/getinvoices)
 ```java
 JSONObject webhooks = client.getWebhooks();
@@ -77,6 +80,7 @@ String webhookId = "T45A7810";
 JSONObject invoice = client.getWebhook(webhookId);
 System.out.println(invoice);
 ```
+
 **Get balance**
 Get the balance of an specific asset of the merchant [Read docs](https://telepay.readme.io/reference/getBalance)
 ```java
@@ -86,6 +90,7 @@ String network = "mainnet";
 JSONObject balance = client.getBalance(asset, blockchain, network);
 System.out.println(balance);
 ```
+
 **Create Invoice**
 Create an new invoice with an specified amount [Read docs](https://telepay.readme.io/reference/createInvoice)
 ```java
@@ -96,6 +101,7 @@ double amount = 10;
 JSONObject invoice = client.createInvoice(asset, blockchain, network, amount);
 System.out.println(invoice);
 ```
+
 **Delete Invoice**
 Delete an invoice [Read docs](https://telepay.readme.io/reference/deleteInvoice)
 ```java
@@ -103,6 +109,7 @@ String invoiceNumber
 JSONObject delete = client.deleteInvoice(invoiceNumber);
 System.out.println(delete);
 ```
+
 **Cancel Invoice**
 Cancel an invoice [Read docs](https://telepay.readme.io/reference/cancelInvoice)
 ```java
@@ -110,6 +117,7 @@ String invoiceNumber
 JSONObject cancel = client.cancelInvoice(invoiceNumber);
 System.out.println(delete);
 ```
+
 **Transfer**
 Transfer funds between wallets [Read docs](https://telepay.readme.io/reference/transfer)
 ```java
