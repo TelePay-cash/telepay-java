@@ -1,10 +1,8 @@
-# JAVA SDK for the TelePay API
+# Java SDK for the TelePay API
 
 ![TelePay Python](https://github.com/TelePay-cash/telepay-java/blob/main/docs/cover.png?raw=true)
 
 Official TelePay client library for the Python language, so you can easily process cryptocurrency payments using the REST API.
-
-TelePay client library for the JAVA language, so you can easily process cryptocurrency payments using the REST API.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Last commit](https://img.shields.io/github/last-commit/telepay-cash/telepay-java.svg?style=flat-square)](https://github.com/telepay-cash/telepay-java/commits)
