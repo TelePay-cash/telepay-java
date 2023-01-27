@@ -139,8 +139,8 @@ We use JUnit to test the API endpoints before publishing new versions of this li
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://www.linkedin.com/in/josé-r-garcía-88a793221/"><img src="https://avatars.githubusercontent.com/jrgf" width="100px;" alt=""/><br /><sub><b>José Rafael García</b></sub></a><br /><a href="https://github.com/TelePay-cash/telepay-php/commits?author=jrgf" title="Code">💻</a></td>
-    <td align="center"><a href="https://carloslugones.com"><img src="https://avatars.githubusercontent.com/u/18733370?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Carlos Lugones</b></sub></a><br /><a href="https://github.com/telepay-cash/telepay-node/commits?author=CarlosLugones" title="Mentoring">🧑‍🏫</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/josé-r-garcía-88a793221/"><img src="https://avatars.githubusercontent.com/jrgf" width="100px;" alt=""/><br /><sub><b>José Rafael García</b></sub></a><br /><a href="https://github.com/TelePay-cash/telepay-java/commits?author=jrgf" title="Code">💻</a></td>
+    <td align="center"><a href="https://carloslugones.com"><img src="https://avatars.githubusercontent.com/u/18733370?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Carlos Lugones</b></sub></a><br /><a href="https://github.com/telepay-cash/telepay-java/commits?author=CarlosLugones" title="Mentoring">🧑‍🏫</a></td>
   </tr>
 </table>
 <!-- markdownlint-restore -->
