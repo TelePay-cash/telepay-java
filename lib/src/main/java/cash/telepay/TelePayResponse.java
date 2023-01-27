@@ -12,7 +12,7 @@ import org.json.JSONObject;
  * ResponseInput
  * @author jg123
  */
-public class ResponseInput {
+public class TelePayResponse {
     public JSONObject responseJSON(String baseUrl, String responseType, String secretKey, String endpoint) {
         if ("GET".equals(responseType)) {
             HttpRequest request = HttpRequest.newBuilder().uri(URI.create(baseUrl + endpoint))

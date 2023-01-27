@@ -29,7 +29,7 @@ The SDK has 2 dependencies of the libraries:
 **Configure the TelePay client using the secret of your merchant**
 ```java
 Merchant merchant = new Merchant(YOUR_SECRET_KEY);
-TelepayClient client = new TelepayClient(merchant);
+TelePayClient client = new TelePayClient(merchant);
 ```
 
 **Get your current merchant** [Read docs](https://telepay.readme.io/reference/getme)
