@@ -21,3 +21,5 @@ jobs:
 
       - name: Execute Gradle build
         run: ./gradlew test --tests "cash.telepay.LibraryTest"
+        env:
+          GITHUB_TOKEN: ${{ secrets.TELEPAY_API_KEY }}
