@@ -26,10 +26,9 @@ The SDK has 2 dependencies of the libraries:
 
 ## Using the library
 
-**Configure the TelePay client using the secret of your merchant**
+**Initialize the TelePay client using your secret API key, located in your merchant dashboard.**
 ```java
-Merchant merchant = new Merchant(YOUR_SECRET_KEY);
-TelePayClient client = new TelePayClient(merchant);
+TelePayClient client = new TelePayClient(YOUR_SECRET_KEY);
 ```
 
 **Get your current merchant** [Read docs](https://telepay.readme.io/reference/getme)

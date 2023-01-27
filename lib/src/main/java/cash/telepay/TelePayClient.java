@@ -9,86 +9,82 @@ import org.json.JSONObject;
 public class TelePayClient {
 
     private final String baseUrl = "https://api.telepay.cash/rest/";
-    private Merchant merchant;
+    private String secretApiKey;
 
-    public TelePayClient(Merchant merchant) {
-        this.merchant = merchant;
+    public TelePayClient(String secretApiKey) {
+        this.secretApiKey = secretApiKey;
     }
 
     public JSONObject getMe() {
         TelePayResponse response = new TelePayResponse();
-        return response.responseJSON(baseUrl, "GET", merchant.secretKey(), "getMe");
+        return response.responseJSON(baseUrl, "GET", secretApiKey, "getMe");
     }
 
     public JSONObject getBalance() {
         TelePayResponse response = new TelePayResponse();
-        return response.responseJSON(baseUrl, "GET", merchant.secretKey(), "getBalance");
+        return response.responseJSON(baseUrl, "GET", secretApiKey, "getBalance");
     }
 
     public JSONObject getAssets() {
         TelePayResponse response = new TelePayResponse();
-        return response.responseJSON(baseUrl, "GET", merchant.secretKey(), "getAssets");
+        return response.responseJSON(baseUrl, "GET", secretApiKey, "getAssets");
     }
 
     public JSONObject getInvoice(String invoice) {
         TelePayResponse response = new TelePayResponse();
-        return response.responseJSON(baseUrl, "GET", merchant.secretKey(), "getInvoice/" + invoice);
+        return response.responseJSON(baseUrl, "GET", secretApiKey, "getInvoice/" + invoice);
     }
 
     public JSONObject getInvoices() {
         TelePayResponse response = new TelePayResponse();
-        return response.responseJSON(baseUrl, "GET", merchant.secretKey(), "getInvoices");
+        return response.responseJSON(baseUrl, "GET", secretApiKey, "getInvoices");
     }
 
     public JSONObject getWebhook(String webhookId) {
 
         TelePayResponse response = new TelePayResponse();
-        return response.responseJSON(baseUrl, "GET", merchant.secretKey(), "getWebhook/" + webhookId);
+        return response.responseJSON(baseUrl, "GET", secretApiKey, "getWebhook/" + webhookId);
 
     }
 
     public JSONObject getWebhooks() {
         TelePayResponse response = new TelePayResponse();
-        return response.responseJSON(baseUrl, "GET", merchant.secretKey(), "getWebhooks");
+        return response.responseJSON(baseUrl, "GET", secretApiKey, "getWebhooks");
     }
 
     public JSONObject getBalance(String asset, String blockchain, String network) {
         TelePayResponse response = new TelePayResponse();
-        return response.responseJSON(baseUrl, "POST", merchant.secretKey(), "getBalance", asset, blockchain, network);
+        return response.responseJSON(baseUrl, "POST", secretApiKey, "getBalance", asset, blockchain, network);
     }
 
     public JSONObject createInvoice(String asset, String blockchain, String network, double amount) {
         TelePayResponse response = new TelePayResponse();
-        return response.responseJSON(baseUrl, "POST", merchant.secretKey(), "createInvoice", asset, blockchain, network, amount);
+        return response.responseJSON(baseUrl, "POST", secretApiKey, "createInvoice", asset, blockchain, network, amount);
     }
 
     public JSONObject cancelInvoice(String invoiceNumber) {
         TelePayResponse response = new TelePayResponse();
-        return response.responseJSON(baseUrl, "POST", merchant.secretKey(), "cancelInvoice", invoiceNumber);
+        return response.responseJSON(baseUrl, "POST", secretApiKey, "cancelInvoice", invoiceNumber);
     }
 
     public JSONObject deleteInvoice(String invoiceNumber) {
         TelePayResponse response = new TelePayResponse();
-        return response.responseJSON(baseUrl, "POST", merchant.secretKey(), "deleteInvoice", invoiceNumber);
+        return response.responseJSON(baseUrl, "POST", secretApiKey, "deleteInvoice", invoiceNumber);
     }
 
     public JSONObject transfer(String asset, String blockchain, String network, float amount, String username) {
         TelePayResponse response = new TelePayResponse();
-        return response.responseJSON(baseUrl, "POST", merchant.secretKey(), "transfer", asset, blockchain, network, amount, username);
+        return response.responseJSON(baseUrl, "POST", secretApiKey, "transfer", asset, blockchain, network, amount, username);
     }
 
     public JSONObject getWithdrawFee(String asset, String blockchain, String network, float amount, String toAddress) {
         TelePayResponse response = new TelePayResponse();
-        return response.responseJSONWithdraw(baseUrl, "POST", merchant.secretKey(), "getWithdrawFee", asset, blockchain, network, amount, toAddress);
+        return response.responseJSONWithdraw(baseUrl, "POST", secretApiKey, "getWithdrawFee", asset, blockchain, network, amount, toAddress);
     }
 
     public JSONObject withdraw(String asset, String blockchain, String network, float amount, String toAddress) {
         TelePayResponse response = new TelePayResponse();
-        return response.responseJSONWithdraw(baseUrl, "POST", merchant.secretKey(), "withdraw", asset, blockchain, network, amount, toAddress);
-    }
-
-    public Merchant getMerchant() {
-        return merchant;
+        return response.responseJSONWithdraw(baseUrl, "POST", secretApiKey, "withdraw", asset, blockchain, network, amount, toAddress);
     }
 
 }

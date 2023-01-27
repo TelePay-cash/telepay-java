@@ -8,8 +8,7 @@ import static org.junit.Assert.*;
 public class LibraryTest {
 
     private final String apiKey = System.getenv("TELEPAY_API_KEY");
-    private final Merchant merchant = new Merchant(apiKey);
-    private final TelePayClient client = new TelePayClient(merchant);
+    private final TelePayClient client = new TelePayClient(apiKey);
 
     @Test public void testApiKey() {
         assertNotEquals(apiKey, null);
