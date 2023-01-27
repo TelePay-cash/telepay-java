@@ -4,12 +4,12 @@ import org.json.JSONObject;
 
 /**
  * TelePayClient
- * @author jgrgf
+ * @author jrgf
  */
 public class TelePayClient {
 
     private final String baseUrl = "https://api.telepay.cash/rest/";
-    private String secretApiKey;
+    private final String secretApiKey;
 
     public TelePayClient(String secretApiKey) {
         this.secretApiKey = secretApiKey;
