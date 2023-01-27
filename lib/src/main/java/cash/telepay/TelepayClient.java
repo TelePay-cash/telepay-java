@@ -1,14 +1,11 @@
 package cash.telepay;
 
-
 import org.json.JSONObject;
 
-
 /**
+ * TelePayClient
  * @author jgrgf
  */
-
-
 public class TelepayClient {
     private Merchant merchant;
 
