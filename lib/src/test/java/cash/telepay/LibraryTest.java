@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class LibraryTest {
 
-    private final String apiKey = System.getenv("TELEPAY_API_KEY");
+    private final String apiKey = System.getenv("TELEPAY_SECRET_API_KEY");
     private final TelePayClient client = new TelePayClient(apiKey);
 
     @Test public void testApiKey() {

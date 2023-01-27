@@ -131,7 +131,7 @@ System.out.println(transfer);
 
 ## Run the tests
 
-We use JUnit to test the API endpoints before publishing new versions of this library. To run the tests, you must define the `TELEPAY_API_KEY` environment variable in your IDE before running the `LibraryTest` class.
+We use JUnit to test the API endpoints before publishing new versions of this library. To run the tests, you must define the `TELEPAY_SECRET_API_KEY` environment variable in your IDE before running the `LibraryTest` class.
 
 ## Contributors ✨
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
