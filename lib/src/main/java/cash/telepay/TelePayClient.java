@@ -59,7 +59,10 @@ public class TelePayClient {
 
     public JSONObject createInvoice(String asset, String blockchain, String network, double amount) {
         TelePayResponse response = new TelePayResponse();
-        return response.responseJSON(baseUrl, "POST", secretApiKey, "createInvoice", asset, blockchain, network, amount);
+        return response.responseJSON(
+                baseUrl, "POST",
+                secretApiKey, "createInvoice",
+                asset, blockchain, network, amount);
     }
 
     public JSONObject cancelInvoice(String invoiceNumber) {
