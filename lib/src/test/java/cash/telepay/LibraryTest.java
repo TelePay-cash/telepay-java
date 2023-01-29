@@ -48,7 +48,7 @@ public class LibraryTest {
         assertNotNull(response.get("number"));
     }
     @Test public void cancelInvoice(){
-        JSONObject response = client.cancelInvoice("X9FE7SZNO0");
+        JSONObject response = client.cancelInvoice("D4LEK0C91O");
         assertNotNull(response.get("status"));
     }
 
