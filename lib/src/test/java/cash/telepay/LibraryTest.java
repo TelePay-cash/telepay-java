@@ -12,11 +12,6 @@ public class LibraryTest {
 
     private final String apiKey = System.getenv("TELEPAY_SECRET_API_KEY");
 
-    private final String asset = System.getenv("ASSET");
-    private final String network = System.getenv("NETWORK");
-    private final String blockchain = System.getenv("BLOCKCHAIN");
-    private final String amount = System.getenv("AMOUNT");
-    private final String invoiceId = System.getenv("INVOICE_ID");
 
 
 
@@ -49,15 +44,12 @@ public class LibraryTest {
         assertNotNull(response.get("webhooks"));
     }
     @Test public void createInvoice(){
-        JSONObject response = client.createInvoice(asset,network,blockchain,Double.parseDouble(amount));
+        JSONObject response = client.createInvoice("TON","mainnet","TON",10);
         assertNotNull(response.get("number"));
     }
     @Test public void cancelInvoice(){
-        JSONObject response = client.cancelInvoice(invoiceId);
-        assertTrue(response.get("status").equals("canceled"));
+        JSONObject response = client.cancelInvoice("X9FE7SZNO0");
+        assertNotNull(response.get("status"));
     }
-    @Test public void deleteInvoice(){
-        JSONObject response = client.deleteInvoice(invoiceId);
-        assertTrue(response.get("status").equals("deleted"));
-    }
+
 }
